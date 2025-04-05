@@ -1,0 +1,342 @@
+<sdf version="1.7">
+  <model name="focus_one">
+    <link name="base_link">
+      <inertial>
+        <pose>0 -0 0.379682 0 -0 0</pose>
+        <mass>121.166</mass>
+        <inertia>
+          <ixx>6.35113</ixx>
+          <ixy>6.70076e-32</ixy>
+          <ixz>-1.22624e-31</ixz>
+          <iyy>6.35113</iyy>
+          <iyz>1.8453e-15</iyz>
+          <izz>3.83548</izz>
+        </inertia>
+      </inertial>
+      <collision name="base_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="base_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="joint_1" type="revolute">
+      <pose relative_to="base_link">0.000454 -0.001632 0.58343 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>link_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>6.28</upper>
+          <effort>500</effort>
+          <velocity>0.05</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="link_1">
+      <pose relative_to="joint_1">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.002208 0.005563 0.296166 0 -0 0</pose>
+        <mass>38.3317</mass>
+        <inertia>
+          <ixx>0.836298</ixx>
+          <ixy>0.00104495</ixy>
+          <ixz>0.000754815</ixz>
+          <iyy>0.848009</iyy>
+          <iyz>-0.00470293</iyz>
+          <izz>0.318916</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_1_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="link_1_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="joint_2" type="revolute">
+      <pose relative_to="link_1">-0.000454 0.311632 0.4 0 -0 0</pose>
+      <parent>link_1</parent>
+      <child>link_2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>0.2</lower>
+          <upper>2.07</upper>
+          <effort>250</effort>
+          <velocity>0.05</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="link_2">
+      <pose relative_to="joint_2">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.160397 -0.077262 0.31781 0 -0 0</pose>
+        <mass>107.699</mass>
+        <inertia>
+          <ixx>4.45301</ixx>
+          <ixy>-0.0713932</ixy>
+          <ixz>2.04008</ixz>
+          <iyy>5.49921</iyy>
+          <iyz>0.141459</iyz>
+          <izz>1.4405</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_2_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="link_2_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="joint_3" type="revolute">
+      <pose relative_to="link_2">-0.334624 -0.35 0.663022 0 -0 0</pose>
+      <parent>link_2</parent>
+      <child>link_3</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>1.25</lower>
+          <upper>4.702</upper>
+          <effort>250</effort>
+          <velocity>0.05</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="link_3">
+      <pose relative_to="joint_3">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.20176 0.067291 0.066413 0 -0 0</pose>
+        <mass>25.5043</mass>
+        <inertia>
+          <ixx>0.217119</ixx>
+          <ixy>0.0825447</ixy>
+          <ixz>0.349345</ixz>
+          <iyy>1.27276</iyy>
+          <iyz>-0.0271716</iyz>
+          <izz>1.16339</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_3_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="link_3_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="joint_4" type="revolute">
+      <pose relative_to="link_3">-0.50429 0.33 0.165999 0 -0 0</pose>
+      <parent>link_3</parent>
+      <child>link_4</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>1.57</lower>
+          <upper>1.57358</upper>
+          <effort>250</effort>
+          <velocity>0.025</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="link_4">
+      <pose relative_to="joint_4">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.234407 -0.066663 0.100562 0 -0 0</pose>
+        <mass>20.0585</mass>
+        <inertia>
+          <ixx>0.225734</ixx>
+          <ixy>-0.0396503</ixy>
+          <ixz>0.348001</ixz>
+          <iyy>1.0281</iyy>
+          <iyz>0.0170118</iyz>
+          <izz>0.88761</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_4_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="link_4_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="joint_5" type="revolute">
+      <pose relative_to="link_4">-0.508232 -0.345 0.21804 0.662786 -0 1.5708</pose>
+      <parent>link_4</parent>
+      <child>link_5</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>0.4</lower>
+          <upper>1.5</upper>
+          <effort>250</effort>
+          <velocity>0.025</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="link_5">
+      <pose relative_to="joint_5">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.058145 0 -0.069539 0 -0 0</pose>
+        <mass>10.6191</mass>
+        <inertia>
+          <ixx>0.148878</ixx>
+          <ixy>5.0282e-07</ixy>
+          <ixz>0.00553326</ixz>
+          <iyy>0.155691</iyy>
+          <iyz>5.95667e-07</iyz>
+          <izz>0.0357413</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_5_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="link_5_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="joint_6" type="prismatic">
+      <pose relative_to="link_5">0.065639 0 -0.442076 0 -0 0</pose>
+      <parent>link_5</parent>
+      <child>link_6</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0.18</upper>
+          <effort>15000</effort>
+          <velocity>0.1</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="link_6">
+      <pose relative_to="joint_6">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0 0.107106 0 -0 0</pose>
+        <mass>10.2001</mass>
+        <inertia>
+          <ixx>0.0660468</ixx>
+          <ixy>1.96445e-07</ixy>
+          <ixz>1.84487e-07</ixz>
+          <iyy>0.0728429</iyy>
+          <iyz>-2.18561e-07</iyz>
+          <izz>0.0269285</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_6_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_6.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="link_6_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://focus_one_robot/meshes/visual/link_6.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
