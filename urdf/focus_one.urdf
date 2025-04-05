@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="focus_one">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 -2.22044604925031E-16 0.379681653155367"
+        rpy="0 0 0" />
+      <mass
+        value="121.16606658481" />
+      <inertia
+        ixx="6.35112594534292"
+        ixy="6.70075736704187E-32"
+        ixz="-1.22623842249066E-31"
+        iyy="6.35112594534292"
+        iyz="1.84529974635965E-15"
+        izz="3.83547642649489" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.0022075897637579 0.00556267745318662 0.296165616698225"
+        rpy="0 0 0" />
+      <mass
+        value="38.3316831770885" />
+      <inertia
+        ixx="0.836297568774467"
+        ixy="0.00104494646122039"
+        ixz="0.000754815025778347"
+        iyy="0.848008822237879"
+        iyz="-0.00470293267461019"
+        izz="0.318916323042344" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0.000453776177905318 -0.00163190970462757 0.583430114209497"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="500"
+      velocity="0.05" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.160397334808256 -0.077262002092607 0.317810292386523"
+        rpy="0 0 0" />
+      <mass
+        value="107.698631058371" />
+      <inertia
+        ixx="4.45300838036733"
+        ixy="-0.0713932386426958"
+        ixz="2.0400755292518"
+        iyy="5.49920915759251"
+        iyz="0.141458616536782"
+        izz="1.44050224387635" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="-0.000453776177895993 0.311631909704627 0.399999999999993"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.2"
+      upper="2.07"
+      effort="250"
+      velocity="0.05" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.201760481073866 0.06729067878538 0.066413147056462"
+        rpy="0 0 0" />
+      <mass
+        value="25.5042959553062" />
+      <inertia
+        ixx="0.217119241484828"
+        ixy="0.0825446602605661"
+        ixz="0.3493447373883"
+        iyy="1.27276186274013"
+        iyz="-0.0271716476433567"
+        izz="1.16339002819408" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="-0.334623938031127 -0.35 0.663022427025265"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="1.0"
+      upper="3.8"
+      effort="250"
+      velocity="0.05" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="-0.234406677904848 -0.0666631367354474 0.100562338319374"
+        rpy="0 0 0" />
+      <mass
+        value="20.0585468526741" />
+      <inertia
+        ixx="0.225734288644349"
+        ixy="-0.0396503479785347"
+        ixz="0.348000732340316"
+        iyy="1.0280996724297"
+        iyz="0.0170117888402346"
+        izz="0.887609904522989" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="-0.504289699985156 0.329999999999999 0.165998675774342"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="2.65"
+      effort="250"
+      velocity="0.025" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.058145110098764 3.16835891744915E-07 -0.0695390026922316"
+        rpy="0 0 0" />
+      <mass
+        value="10.6190708335877" />
+      <inertia
+        ixx="0.148877903089667"
+        ixy="5.02819686467743E-07"
+        ixz="0.00553325658501009"
+        iyy="0.15569131388024"
+        iyz="5.95667253196322E-07"
+        izz="0.035741273802861" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="-0.508231786141092 -0.345 0.218040147081425"
+      rpy="0.662785749448086 0 1.5707963267949" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="3.6"
+      upper="4.6"
+      effort="250"
+      velocity="0.025" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="2.41125251987384E-08 -9.92570636793033E-08 0.107105903452022"
+        rpy="0 0 0" />
+      <mass
+        value="10.2000942320303" />
+      <inertia
+        ixx="0.066046768442933"
+        ixy="1.96445194588987E-07"
+        ixz="1.84486840532216E-07"
+        iyy="0.0728428998544438"
+        iyz="-2.18561229082051E-07"
+        izz="0.0269284972398884" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://focus_one_robot/meshes/visual/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="prismatic">
+    <origin
+      xyz="0.065638523916589 0 -0.442075946792479"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.18"
+      effort="15000"
+      velocity="0.1" />
+  </joint>
+  <gazebo>
+  	<plugin name="gazebo_ros_factory" filename="libgazebo_ros_factory.so"/>
+  </gazebo>
+</robot>
+
+
+
